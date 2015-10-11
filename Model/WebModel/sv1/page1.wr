@@ -1,0 +1,73 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="180" gr:y="25" id="sv1#page1" name="Login | Register" landmark="true">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv1#page1#enu7" name="Please login" linkOrder="sv1#page1#enu7#ln9">
+      <Field id="sv1#page1#enu7#fld13" name="Username" type="string" modifiable="true"/>
+      <Field id="sv1#page1#enu7#fld14" name="Password" type="password" modifiable="true"/>
+      <Link id="sv1#page1#enu7#ln9" name="Login" to="sv1#miu1" type="normal" validate="true">
+        <LinkParameter id="sv1#page1#enu7#ln9#par18" name="Password_Password" source="sv1#page1#enu7#fld14" target="sv1#miu1.mov1#opm1#icu1#icp1"/>
+        <LinkParameter id="sv1#page1#enu7#ln9#par19" name="Username_Username" source="sv1#page1#enu7#fld13" target="sv1#miu1.mov1#opm1#icu1#icp3"/>
+      </Link>
+    </EntryUnit>
+    <MultiMessageUnit gr:x="10" gr:y="90" id="sv1#page1#mssu3" name="Register" linkOrder="sv1#page1#mssu3#ln10">
+      <Message xml:space="preserve">Want support with your image annotation or help the community?</Message>
+      <Link id="sv1#page1#mssu3#ln10" name="Register here" to="sv1#page6#enu2" type="normal" validate="true"/>
+    </MultiMessageUnit>
+    <MultiMessageUnit gr:x="130" gr:y="85" id="sv1#page1#mssu4" name="Error "/>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page1#enu7">
+          <layout:Field field="sv1#page1#enu7#fld13"/>
+          <layout:Field field="sv1#page1#enu7#fld14"/>
+          <layout:Link link="sv1#page1#enu7#ln9"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page1#mssu3">
+          <layout:Link link="sv1#page1#mssu3#ln10"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page1#mssu4"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

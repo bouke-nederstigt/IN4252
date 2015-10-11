@@ -1,0 +1,20 @@
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="530" gr:y="165" id="sv1#opg1" name="Create user and login" transaction="true">
+  <OperationUnits>
+    <LoginUnit id="sv1#opg1#lgu3" name="Login" gr:x="0" gr:y="100"/>
+    <CreateUnit id="sv1#opg1#cru1" name="Add user" gr:x="0" gr:y="0" entity="User">
+      <OKLink id="sv1#opg1#cru1#oln3" name="OKFlow4" to="sv1#opg1#mlu2">
+        <LinkParameter id="sv1#opg1#cru1#oln3#par7" name="email_Mail - To" source="emailArray" target="sv1#opg1#mlu2.to"/>
+        <LinkParameter id="sv1#opg1#cru1#oln3#par8" name="userName_UserName" source="userNameArray" target="sv1#opg1#mlu2.UserName"/>
+      </OKLink>
+      <Link id="sv1#opg1#cru1#ln4" name="Flow7" to="sv1#opg1#lgu3" type="transport" validate="true">
+        <LinkParameter id="sv1#opg1#cru1#ln4#par9" name="userName_Username" source="userNameArray" target="sv1#opg1#lgu3.username"/>
+        <LinkParameter id="sv1#opg1#cru1#ln4#par10" name="password_Password" source="passwordArray" target="sv1#opg1#lgu3.password"/>
+      </Link>
+    </CreateUnit>
+    <MailUnit id="sv1#opg1#mlu2" name="Send confirmation" gr:x="130" gr:y="5" format="html" template="WEB-INF/descr/confirm.xml" smtpServer="smtp1">
+      <SubjectTemplate xml:space="preserve">Imager registration success!</SubjectTemplate>
+      <OKLink id="sv1#opg1#mlu2#oln4" name="OKFlow5" to="sv1#opg1#lgu3"/>
+      <KOLink id="sv1#opg1#mlu2#kln4" name="KOFlow5" to="sv1#opg1#lgu3" gr:bendpoints="-85,65,80,-30"/>
+    </MailUnit>
+  </OperationUnits>
+</OperationGroup>
