@@ -1,0 +1,25 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="405" gr:y="205" id="mov1#opm4" name="Save task">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm4#icu4" gr:x="-45" gr:y="110" linkOrder="mov1#opm4#icu4#ln11 mov1#opm4#icu4#ln12 mov1#opm4#icu4#ln18">
+      <OKLink id="mov1#opm4#icu4#oln18" name="OKFlow18" to="mov1#opm4#opg3#inn2">
+        <LinkParameter id="mov1#opm4#icu4#oln18#par29" name="Task key_Input" source="mov1#opm4#icu4#icp6" target="mov1#opm4#opg3#inn2.isnotnull"/>
+      </OKLink>
+      <InputCollectorParameter id="mov1#opm4#icu4#icp2" name="Task object"/>
+      <InputCollectorParameter id="mov1#opm4#icu4#icp6" name="Task key"/>
+      <InputCollectorParameter id="mov1#opm4#icu4#icp7" name="Campaign object"/>
+      <Link id="mov1#opm4#icu4#ln11" name="Flow11" to="mov1#opm4#opg3#cru3" type="transport" validate="true">
+        <LinkParameter id="mov1#opm4#icu4#ln11#par16" name="Task object_Task Object" source="mov1#opm4#icu4#icp2" target="mov1#opm4#opg3#cru3.entityBeans"/>
+      </Link>
+      <Link id="mov1#opm4#icu4#ln12" name="Flow12" to="mov1#opm4#opg3#mfu2" type="transport" validate="true">
+        <LinkParameter id="mov1#opm4#icu4#ln12#par17" name="Task object_Task Object" source="mov1#opm4#icu4#icp2" target="mov1#opm4#opg3#mfu2.entityBeans"/>
+      </Link>
+      <Link id="mov1#opm4#icu4#ln18" name="Flow18" to="mov1#opm4#opg3#rcnu1" automaticCoupling="true" type="transport" validate="true" gr:bendpoints="90,-173,-670,-178;400,-172,-360,-177;758,-173,-2,-178"/>
+    </InputCollectorUnit>
+    <KOCollectorUnit id="mov1#opm4#kocu4" name="Error" gr:x="1000" gr:y="25">
+      <OutputCollectorParameter id="mov1#opm4#kocu4#ocp3" name="Message" value="Something went wrong trying to save the campaign."/>
+    </KOCollectorUnit>
+    <OKCollectorUnit id="mov1#opm4#okcu2" name="Success" gr:x="1000" gr:y="130">
+      <OutputCollectorParameter id="mov1#opm4#okcu2#ocp4" name="Message" value="Campaign was saved"/>
+    </OKCollectorUnit>
+  </OperationUnits>
+</OperationModule>

@@ -1,0 +1,28 @@
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1#opm3#opg2" name="Save Category Information" transaction="true" gr:x="275" gr:y="5">
+  <OperationUnits>
+    <CreateUnit id="mov1#opm3#opg2#cru2" name="Create Campaign" gr:x="135" gr:y="0" entity="ent5">
+      <OKLink id="mov1#opm3#opg2#cru2#oln5" name="OKLink51" to="mov1#opm3#opg2#pcu1"/>
+    </CreateUnit>
+    <ModifyUnit id="mov1#opm3#opg2#mfu1" name="Modify Campaign" gr:x="135" gr:y="190" entity="ent5">
+      <OKLink id="mov1#opm3#opg2#mfu1#oln6" name="OKLink69" to="mov1#opm3#opg2#pcu1"/>
+      <Selector id="mov1#opm3#opg2#mfu1#su3" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm3#opg2#mfu1#su3#kcond3" name="Category" predicate="in" implied="false"/>
+      </Selector>
+    </ModifyUnit>
+    <IsNotNullUnit id="mov1#opm3#opg2#inn1" name="Existing Campaign?" gr:x="0" gr:y="100">
+      <OKLink id="mov1#opm3#opg2#inn1#oln7" name="OKLink47" to="mov1#opm3#opg2#mfu1">
+        <LinkParameter id="mov1#opm3#opg2#inn1#oln7#par25" name="Input Value_Category [oid]" source="inputValue" target="mov1#opm3#opg2#mfu1#su3#kcond3.ent5#att5"/>
+      </OKLink>
+      <KOLink id="mov1#opm3#opg2#inn1#kln3" name="KOLink19" to="mov1#opm3#opg2#cru2"/>
+    </IsNotNullUnit>
+    <ParameterCollectorUnit id="mov1#opm3#opg2#pcu1" name="Collect Message Information" gr:x="275" gr:y="95">
+      <CollectorParameter id="mov1#opm3#opg2#pcu1#pcp1" name="Message" value="Category succesfully saved"/>
+      <OKLink id="mov1#opm3#opg2#pcu1#oln8" name="OKLink1" to="mov1#opm3#okcu1">
+        <LinkParameter id="mov1#opm3#opg2#pcu1#oln8#par5" name="Message" source="mov1#opm3#opg2#pcu1#pcp1" target="mov1#opm3#okcu1#ocp1"/>
+      </OKLink>
+    </ParameterCollectorUnit>
+  </OperationUnits>
+  <KOLink id="mov1#opm3#opg2#kln6" name="KOLink10" to="mov1#opm3#kocu3">
+    <LinkParameter id="mov1#opm3#opg2#kln6#par6" name="Message" target="mov1#opm3#kocu3#ocp2" sourceValue="Category not saved"/>
+  </KOLink>
+</OperationGroup>

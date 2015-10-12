@@ -1,0 +1,98 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv2#area2#page9" name="Manage Campaigns">
+  <ContentUnits>
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv2#area2#page9#pwu2" name="Campaigns" sortable="true" checkable="false" useCountQuery="false" entity="ent5" linkOrder="sv2#area2#page9#pwu2#ln15 sv2#area2#page9#pwu2#ln21 sv2#area2#page9#pwu2#ln2" displayAttributes="ent5#att27 ent5#att29 ent5#att28">
+      <Link id="sv2#area2#page9#pwu2#ln15" name="edit" to="sv2#area2#page9#enu3" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv2#area2#page9#pwu2#ln21" name="delete" to="sv2#area2#dlu1" type="normal" validate="true" automaticCoupling="true"/>
+      <Link id="sv2#area2#page9#pwu2#ln2" name="Manage tasks" to="sv2#area2#page12" automaticCoupling="true" type="normal" validate="true"/>
+    </PowerIndexUnit>
+    <EntryUnit gr:x="155" gr:y="5" id="sv2#area2#page9#enu3" name="Campaign info" linkOrder="sv2#area2#page9#enu3#ln16 sv2#area2#page9#enu3#ln17" entity="ent5">
+      <Link id="sv2#area2#page9#enu3#ln16" name="Save" to="sv2#miu4" type="normal" validate="true">
+        <LinkParameter id="sv2#area2#page9#enu3#ln16#par23" name="Key [oid]_Campaign key" source="key.ent5#att5" target="sv2#miu4.mov1#opm3#icu3#icp4"/>
+        <LinkParameter id="sv2#area2#page9#enu3#ln16#par24" name="Annotation Campaigns Object_Campaign object" source="entityBean" target="sv2#miu4.mov1#opm3#icu3#icp5"/>
+        <LinkParameter id="sv2#area2#page9#enu3#ln16#par26" name="budget_PASSING" source="sv2#area2#page9#enu3#fld2" passing="true"/>
+        <LinkParameter id="sv2#area2#page9#enu3#ln16#par27" name="enabled_PASSING" source="sv2#area2#page9#enu3#fld9" passing="true"/>
+        <LinkParameter id="sv2#area2#page9#enu3#ln16#par28" name="name_PASSING" source="sv2#area2#page9#enu3#fld1" passing="true"/>
+      </Link>
+      <Link id="sv2#area2#page9#enu3#ln17" name="Cancel" to="sv2#opu1" automaticCoupling="true" type="normal" validate="true"/>
+      <Field id="sv2#area2#page9#enu3#fld1" name="name" type="string" modifiable="true" attribute="ent5#att27">
+        <VRules>
+          <MandatoryValidationRule id="sv2#area2#page9#enu3#fld1#mnd6" name="Mandatory6"/>
+        </VRules>
+      </Field>
+      <Field id="sv2#area2#page9#enu3#fld2" name="budget" type="integer" modifiable="true" attribute="ent5#att28">
+        <VRules>
+          <CompareValidationRule id="sv2#area2#page9#enu3#fld2#cmp2" name="Compare2" predicate="gteq" value="0"/>
+        </VRules>
+      </Field>
+      <Field id="sv2#area2#page9#enu3#fld9" name="enabled" type="boolean" modifiable="true" attribute="ent5#att29">
+        <VRules>
+          <TypeValidationRule id="sv2#area2#page9#enu3#fld9#tvr1" name="Type Validation1" type="boolean"/>
+        </VRules>
+      </Field>
+    </EntryUnit>
+    <MultiMessageUnit gr:x="175" gr:y="100" id="sv2#area2#page9#mssu2" name="Message"/>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area2#page9#pwu2">
+          <layout:Attribute attribute="ent5#att27"/>
+          <layout:Attribute attribute="ent5#att29"/>
+          <layout:Attribute attribute="ent5#att28"/>
+          <layout:Link link="sv2#area2#page9#pwu2#ln15"/>
+          <layout:Link link="sv2#area2#page9#pwu2#ln21"/>
+          <layout:Link link="sv2#area2#page9#pwu2#ln2"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area2#page9#enu3">
+          <layout:Link link="sv2#area2#page9#enu3#ln16"/>
+          <layout:Link link="sv2#area2#page9#enu3#ln17"/>
+          <layout:Field field="sv2#area2#page9#enu3#fld1"/>
+          <layout:Field field="sv2#area2#page9#enu3#fld2"/>
+          <layout:Field field="sv2#area2#page9#enu3#fld9"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area2#page9#mssu2"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

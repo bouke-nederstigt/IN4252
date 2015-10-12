@@ -1,4 +1,4 @@
-<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="530" gr:y="165" id="sv1#opg1" name="Create user and login" transaction="true">
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="600" gr:y="250" id="sv1#opg1" name="Create user and login" transaction="true">
   <OperationUnits>
     <LoginUnit id="sv1#opg1#lgu3" name="Login" gr:x="0" gr:y="100"/>
     <CreateUnit id="sv1#opg1#cru1" name="Add user" gr:x="0" gr:y="0" entity="User">

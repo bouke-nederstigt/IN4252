@@ -1,0 +1,14 @@
+<MasterPage xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv2#mpage1" name="Master" gr:x="160" gr:y="155">
+  <ContentUnits>
+    <GetUnit id="sv2#mpage1#gtu2" name="Get Current User" gr:x="0" gr:y="0" contextParameters="UserCtxParam">
+      <Link id="sv2#mpage1#gtu2#ln1" name="Flow8" to="sv2#mpage1#dau2" type="transport" automaticCoupling="true" validate="true"/>
+    </GetUnit>
+    <DataUnit id="sv2#mpage1#dau2" name="User" gr:x="30" gr:y="125" entity="User" displayAttributes="userName email User#att21" linkOrder="sv2#mpage1#dau2#ln13">
+      <Selector id="sv2#mpage1#dau2#su2" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#mpage1#dau2#su2#kcond2" name="KeyCondition1" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv2#mpage1#dau2#ln13" name="My campaigns" to="sv2#area2#page9" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv2#mpage1#dau2#ln14" name="Flow14" to="sv2#miu2" automaticCoupling="true" type="transport" validate="true"/>
+    </DataUnit>
+  </ContentUnits>
+</MasterPage>

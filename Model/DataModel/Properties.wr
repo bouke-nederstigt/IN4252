@@ -1,5 +1,5 @@
 <DataModel xmlns:db="http://www.webratio.com/2006/WebML/Database" xmlns:gr="http://www.webratio.com/2006/WebML/Graph">
-  <Entity id="User" name="User" duration="persistent" gr:x="20" gr:y="25" gr:hideAttributes="false" attributeOrder="userOID userName password email User#att18 User#att19 User#att21 User#att1" db:database="db1" db:table="user">
+  <Entity id="User" name="User" duration="persistent" gr:x="20" gr:y="-35" gr:hideAttributes="false" attributeOrder="userOID userName password email User#att18 User#att19 User#att21 User#att1" db:database="db1" db:table="user">
     <Attribute name="oid" id="userOID" type="integer" key="true" db:column="oid"/>
     <Attribute name="userName" id="userName" type="string" db:column="username"/>
     <Attribute name="password" id="password" type="password" db:column="password"/>
@@ -7,7 +7,7 @@
     <Attribute id="User#att18" name="name" type="string" db:column="name"/>
     <Attribute id="User#att19" name="BirthDate" type="date" db:column="birthdate"/>
     <Attribute id="User#att21" name="PiggyBank" type="integer" db:column="piggybank"/>
-    <Attribute id="User#att1" name="Type" type="string"/>
+    <Attribute id="User#att1" name="Type" type="string" db:column="type"/>
   </Entity>
   <Entity id="Group" name="Group" duration="persistent" gr:x="245" gr:y="25" gr:hideAttributes="false" attributeOrder="groupOID groupName" db:database="db1" db:table="group">
     <Attribute name="oid" id="groupOID" type="integer" key="true" db:column="oid"/>
@@ -50,7 +50,7 @@
       <db:JoinColumn attribute="moduleOID" name="module_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="440" gr:y="140" id="ent2" name="Task" duration="persistent" attributeOrder="ent2#att2 ent2#att13 ent2#att14 ent2#att15 ent2#att16 ent2#att17" db:database="db1" db:table="task">
+  <Entity gr:x="275" gr:y="190" id="ent2" name="Task" duration="persistent" attributeOrder="ent2#att2 ent2#att13 ent2#att14 ent2#att15 ent2#att16 ent2#att17" db:database="db1" db:table="task">
     <Attribute id="ent2#att2" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent2#att17" name="ExecStamp" type="timestamp" db:column="execstamp"/>
     <Attribute id="ent2#att16" name="ExecTime" type="time" db:column="exectime"/>
@@ -58,24 +58,24 @@
     <Attribute id="ent2#att14" name="Description" type="text" db:column="description"/>
     <Attribute id="ent2#att13" name="Title" type="string" db:column="title"/>
   </Entity>
-  <Entity gr:x="760" gr:y="135" id="ent3" name="Items" duration="persistent" attributeOrder="ent3#att3 ent3#att22 ent3#att23 ent3#att24" db:database="db1" db:table="items">
+  <Entity gr:x="560" gr:y="210" id="ent3" name="Items" duration="persistent" attributeOrder="ent3#att3 ent3#att22 ent3#att23 ent3#att24" db:database="db1" db:table="items">
     <Attribute id="ent3#att3" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent3#att22" name="Title" type="string" db:column="title"/>
     <Attribute id="ent3#att23" name="Caption" type="string" db:column="caption"/>
     <Attribute id="ent3#att24" name="Image" type="url" db:column="image"/>
   </Entity>
-  <Entity gr:x="230" gr:y="315" id="ent5" name="Annotation Campaigns" duration="persistent" attributeOrder="ent5#att5 ent5#att27 ent5#att28 ent5#att29" db:database="db1" db:table="annotation_campaigns">
+  <Entity gr:x="285" gr:y="395" id="ent5" name="Annotation Campaigns" duration="persistent" attributeOrder="ent5#att5 ent5#att27 ent5#att28 ent5#att29" db:database="db1" db:table="annotation_campaigns">
     <Attribute id="ent5#att5" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent5#att27" name="Name" type="string" db:column="name"/>
     <Attribute id="ent5#att28" name="Budget" type="integer" db:column="budget"/>
     <Attribute id="ent5#att29" name="Status" type="boolean" db:column="status"/>
   </Entity>
-  <Entity gr:x="735" gr:y="305" id="ent6" name="Annotation" duration="persistent" attributeOrder="ent6#att6 ent6#att25 ent6#att26" db:database="db1" db:table="annotation">
+  <Entity gr:x="545" gr:y="380" id="ent6" name="Annotation" duration="persistent" attributeOrder="ent6#att6 ent6#att25 ent6#att26" db:database="db1" db:table="annotation">
     <Attribute id="ent6#att6" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent6#att25" name="Label" type="string" db:column="label"/>
     <Attribute id="ent6#att26" name="Confidence" type="integer" db:column="confidence"/>
   </Entity>
-  <Entity gr:x="255" gr:y="200" id="ent7" name="Skills" duration="persistent" attributeOrder="ent7#att7 ent7#att20" db:database="db1" db:table="skills">
+  <Entity gr:x="45" gr:y="225" id="ent7" name="Skills" duration="persistent" attributeOrder="ent7#att7 ent7#att20" db:database="db1" db:table="skills">
     <Attribute id="ent7#att7" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent7#att20" name="skill" type="string" db:column="skill"/>
   </Entity>
@@ -127,5 +127,5 @@
       <db:JoinColumn attribute="ent6#att6" name="annotation_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db1" name="ImageAnnotation" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/ImageAnnotation" username="nud3l" cryptedPassword="true" password="TWFyYTEzMzdKYWRlIQ==" schema="public"/>
+  <db:Database id="db1" name="crowd_image" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/crowd_image" username="root" cryptedPassword="true" password="cm9vdA==" schema="public"/>
 </DataModel>
