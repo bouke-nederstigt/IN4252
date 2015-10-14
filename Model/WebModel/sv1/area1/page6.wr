@@ -1,0 +1,92 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area1#page6" name="Register" landmark="false" ignoreMasterPage="true" gr:x="0" gr:y="225">
+  <ContentUnits>
+    <EntryUnit id="sv1#area1#page6#enu2" name="Registration" gr:x="0" gr:y="0" entity="User" linkOrder="sv1#area1#page6#enu2#ln36" fieldOrder="sv1#area1#page6#enu2#fld12 sv1#area1#page6#enu2#fld13 sv1#area1#page6#enu2#fld14 sv1#area1#page6#enu2#fld15 sv1#area1#page6#enu2#fld16 sv1#area1#page6#enu2#fld17 sv1#area1#page6#enu2#sfld1">
+      <Field id="sv1#area1#page6#enu2#fld12" name="Name" type="string" modifiable="true" attribute="User#att18">
+        <VRules>
+          <MandatoryValidationRule id="sv1#area1#page6#enu2#fld12#mnd13" name="Mandatory Field"/>
+        </VRules>
+      </Field>
+      <Field id="sv1#area1#page6#enu2#fld13" name="e-mail" type="string" modifiable="true" attribute="email">
+        <VRules>
+          <MandatoryValidationRule id="sv1#area1#page6#enu2#fld13#mnd14" name="Mandatory Field"/>
+          <CollectionValidationRule id="sv1#area1#page6#enu2#fld13#clc6" name="Unique e-mail" predicate="notIn" entity="User" attribute="email" errorMessage="This e-mail is already in use"/>
+        </VRules>
+      </Field>
+      <Field id="sv1#area1#page6#enu2#fld14" name="Date of birth" type="date" modifiable="true" attribute="User#att19">
+        <VRules>
+          <MandatoryValidationRule id="sv1#area1#page6#enu2#fld14#mnd15" name="Mandatory Field"/>
+        </VRules>
+      </Field>
+      <Field id="sv1#area1#page6#enu2#fld15" name="Username" type="string" modifiable="true" attribute="userName">
+        <VRules>
+          <MandatoryValidationRule id="sv1#area1#page6#enu2#fld15#mnd16" name="Mandatory Field"/>
+          <CollectionValidationRule id="sv1#area1#page6#enu2#fld15#clc7" name="Unique username" predicate="notIn" entity="User" attribute="userName" errorMessage="This username is already in use"/>
+        </VRules>
+      </Field>
+      <Field id="sv1#area1#page6#enu2#fld16" name="Password" type="password" modifiable="true" attribute="password">
+        <VRules>
+          <MandatoryValidationRule id="sv1#area1#page6#enu2#fld16#mnd17" name="Mandatory Field"/>
+        </VRules>
+      </Field>
+      <Field id="sv1#area1#page6#enu2#fld17" name="Confirm password" type="password" modifiable="true" attribute="password">
+        <VRules>
+          <MandatoryValidationRule id="sv1#area1#page6#enu2#fld17#mnd18" name="Mandatory Field"/>
+          <CompareValidationRule id="sv1#area1#page6#enu2#fld17#cmp4" name="Confirm password" predicate="eq" valueField="sv1#area1#page6#enu2#fld16"/>
+        </VRules>
+      </Field>
+      <Link id="sv1#area1#page6#enu2#ln36" name="Register" to="sv1#area1#opg4#cru7" type="normal" validate="true">
+        <LinkParameter id="sv1#area1#page6#enu2#ln36#par55" name="Type_Group.oid(defaultGroup)" source="sv1#area1#page6#enu2#sfld1" target="sv1#area1#opg4#cru7.User2DefaultGroup.groupOID"/>
+        <LinkParameter id="sv1#area1#page6#enu2#ln36#par56" name="User Object_User Object" source="entityBean" target="sv1#area1#opg4#cru7.entityBeans"/>
+        <LinkParameter id="sv1#area1#page6#enu2#ln36#par57" name="0_PiggyBank" sourceValue="0" target="sv1#area1#opg4#cru7.User#att21"/>
+        <LinkParameter id="sv1#area1#page6#enu2#ln36#par58" name="Type_Type" source="sv1#area1#page6#enu2#sfld1" target="sv1#area1#opg4#cru7.User#att1"/>
+      </Link>
+      <SelectionField id="sv1#area1#page6#enu2#sfld1" name="Group" type="integer" role="User2DefaultGroup">
+        <Slot id="sv1#area1#page6#enu2#sfld1#slot2" name="Group" label="true" output="true" value="Worker|Requester"/>
+        <VRules>
+          <MandatoryValidationRule id="sv1#area1#page6#enu2#sfld1#mnd20" name="Mandatory20"/>
+        </VRules>
+      </SelectionField>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area1#page6#enu2">
+          <layout:Link link="sv1#area1#page6#enu2#ln36"/>
+          <layout:Field field="sv1#area1#page6#enu2#fld12"/>
+          <layout:Field field="sv1#area1#page6#enu2#fld13"/>
+          <layout:Field field="sv1#area1#page6#enu2#fld14"/>
+          <layout:Field field="sv1#area1#page6#enu2#fld15"/>
+          <layout:Field field="sv1#area1#page6#enu2#fld16"/>
+          <layout:Field field="sv1#area1#page6#enu2#fld17"/>
+          <layout:Field field="sv1#area1#page6#enu2#sfld1"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

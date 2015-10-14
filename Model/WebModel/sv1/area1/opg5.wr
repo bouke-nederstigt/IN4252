@@ -1,0 +1,12 @@
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="330" gr:y="515" id="sv1#area1#opg5" name="Set skills" transaction="true">
+  <OperationUnits>
+    <ConnectUnit gr:x="0" gr:y="0" id="sv1#area1#opg5#cnu2" name="Skills" relationship="rel2#role3">
+      <SourceSelector id="sv1#area1#opg5#cnu2#su11" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area1#opg5#cnu2#su11#kcond10" name="KeyCondition10" predicate="in" implied="false"/>
+      </SourceSelector>
+      <TargetSelector id="sv1#area1#opg5#cnu2#su12" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area1#opg5#cnu2#su12#kcond11" name="KeyCondition11" predicate="in" implied="false"/>
+      </TargetSelector>
+    </ConnectUnit>
+  </OperationUnits>
+</OperationGroup>

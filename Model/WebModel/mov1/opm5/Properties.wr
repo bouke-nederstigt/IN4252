@@ -1,0 +1,14 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="220" gr:y="45" id="mov1#opm5" name="Register">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm5#icu5" gr:x="30" gr:y="60" linkOrder="mov1#opm5#icu5#ln6">
+      <InputCollectorParameter id="mov1#opm5#icu5#icp8" name="User Object"/>
+      <Link id="mov1#opm5#icu5#ln6" name="Flow6" to="mov1#opm5#cru4" type="transport" validate="true">
+        <LinkParameter id="mov1#opm5#icu5#ln6#par31" name="User Object_User Object" source="mov1#opm5#icu5#icp8" target="mov1#opm5#cru4.entityBeans"/>
+      </Link>
+    </InputCollectorUnit>
+    <CreateUnit gr:x="325" gr:y="60" id="mov1#opm5#cru4" name="Add user" entity="User">
+      <OKLink id="mov1#opm5#cru4#oln27" name="OKFlow27" to="mov1#opm5#okcu3" automaticCoupling="true"/>
+    </CreateUnit>
+    <OKCollectorUnit gr:x="575" gr:y="75" id="mov1#opm5#okcu3" name="OK Port3"/>
+  </OperationUnits>
+</OperationModule>

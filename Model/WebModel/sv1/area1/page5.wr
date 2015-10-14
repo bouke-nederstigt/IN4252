@@ -1,0 +1,52 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv1#area1#page5" name="Main">
+  <ContentUnits>
+    <EntryUnit id="sv1#area1#page5#enu1" name="Please login" gr:x="0" gr:y="0" linkOrder="sv1#area1#page5#enu1#ln29">
+      <Field id="sv1#area1#page5#enu1#fld10" name="Username" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv1#area1#page5#enu1#fld10#mnd11" name="Mandatory Field"/>
+          <CollectionValidationRule id="sv1#area1#page5#enu1#fld10#clc5" name="Username exists" predicate="in" entity="User" attribute="userName" errorMessage="Username does not exist. Please register below"/>
+        </VRules>
+      </Field>
+      <Field id="sv1#area1#page5#enu1#fld11" name="Password" type="password" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv1#area1#page5#enu1#fld11#mnd12" name="Mandatory"/>
+        </VRules>
+      </Field>
+      <Link id="sv1#area1#page5#enu1#ln29" name="Login" to="sv1#area1#miu8" type="normal" validate="true">
+        <LinkParameter id="sv1#area1#page5#enu1#ln29#par39" name="Password_Password" source="sv1#area1#page5#enu1#fld11" target="sv1#area1#miu8.mov1#opm1#icu1#icp1"/>
+        <LinkParameter id="sv1#area1#page5#enu1#ln29#par40" name="Username_Username" source="sv1#area1#page5#enu1#fld10" target="sv1#area1#miu8.mov1#opm1#icu1#icp3"/>
+      </Link>
+    </EntryUnit>
+    <MultiMessageUnit id="sv1#area1#page5#mssu3" name="Register" gr:x="10" gr:y="90" linkOrder="sv1#area1#page5#mssu3#ln27">
+      <Message xml:space="preserve">Want support with your image annotation or help the community?</Message>
+      <Link id="sv1#area1#page5#mssu3#ln27" name="Register here" to="sv1#area1#page6#enu2" type="normal" validate="true"/>
+    </MultiMessageUnit>
+    <MultiMessageUnit id="sv1#area1#page5#mssu4" name="Error " gr:x="130" gr:y="85"/>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area1#page5#enu1">
+          <layout:Field field="sv1#area1#page5#enu1#fld10"/>
+          <layout:Field field="sv1#area1#page5#enu1#fld11"/>
+          <layout:Link link="sv1#area1#page5#enu1#ln29"/>
+        </layout:Unit>
+        <layout:Unit unitId="sv1#area1#page5#mssu3">
+          <layout:Link link="sv1#area1#page5#mssu3#ln27"/>
+        </layout:Unit>
+        <layout:Unit unitId="sv1#area1#page5#mssu4"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

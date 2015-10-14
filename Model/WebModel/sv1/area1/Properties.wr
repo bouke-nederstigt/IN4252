@@ -1,0 +1,14 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="-15" gr:y="10" id="sv1#area1" name="Login and Register" landmark="true" defaultPage="sv1#area1#page5">
+  <OperationUnits>
+    <ModuleInstanceUnit id="sv1#area1#miu8" name="Login" gr:x="265" gr:y="20" action="true" moduleId="mov1#opm1">
+      <OKLink id="sv1#area1#miu8#oln23" name="OKFlow11" to="sv1#page7" automaticCoupling="true"/>
+      <KOLink id="sv1#area1#miu8#kln16" name="KOFlow5" to="sv1#area1#page5#mssu4" automaticCoupling="true"/>
+    </ModuleInstanceUnit>
+    <IsNotNullUnit gr:x="190" gr:y="475" id="sv1#area1#inn3" name="Skills selected">
+      <KOLink id="sv1#area1#inn3#kln18" name="KOFlow18" to="sv1#area1#page5#mssu4" automaticCoupling="true"/>
+      <OKLink id="sv1#area1#inn3#oln32" name="OKFlow32" to="sv1#area1#opg5#cnu2">
+        <LinkParameter id="sv1#area1#inn3#oln32#par62" name="Input Value_KeyCondition11 [oid] [Skills] [Target]" source="inputValue" target="sv1#area1#opg5#cnu2#su12#kcond11.ent7#att7"/>
+      </OKLink>
+    </IsNotNullUnit>
+  </OperationUnits>
+</Area>

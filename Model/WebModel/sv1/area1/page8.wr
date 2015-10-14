@@ -1,0 +1,68 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area1#page8" name="Set skills" gr:x="0" gr:y="355">
+  <ContentUnits>
+    <MultiChoiceIndexUnit gr:x="5" gr:y="70" id="sv1#area1#page8#mciu2" name="User skills" entity="ent7" displayAttributes="ent7#att20" linkOrder="sv1#area1#page8#mciu2#ln33">
+      <Link id="sv1#area1#page8#mciu2#ln33" name="Confirm skills" to="sv1#area1#inn3" type="normal" validate="true">
+        <LinkParameter id="sv1#area1#page8#mciu2#ln33#par46" name="Checked oid_Input" source="ent7#att7Checked" target="sv1#area1#inn3.isnotnull"/>
+      </Link>
+    </MultiChoiceIndexUnit>
+    <GetUnit gr:x="0" gr:y="175" id="sv1#area1#page8#gtu4" name="Get Current User" contextParameters="UserCtxParam">
+      <Link id="sv1#area1#page8#gtu4#ln38" name="Flow38" to="sv1#area1#opg5#cnu2" type="transport" validate="true">
+        <LinkParameter id="sv1#area1#page8#gtu4#ln38#par61" name="UserCtxParam.oid_KeyCondition10 [oid] [User] [Source]" source="sv1#area1#page8#gtu4.UserCtxParam" target="sv1#area1#opg5#cnu2#su11#kcond10.userOID"/>
+      </Link>
+    </GetUnit>
+    <MultiMessageUnit gr:x="5" gr:y="0" id="sv1#area1#page8#mssu6" name="Your skills">
+      <Message xml:space="preserve">Almost done! Please select your image annotation skills below.</Message>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area1#page8#mssu6"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area1#page8#mciu2">
+          <layout:Attribute attribute="ent7#att20"/>
+          <layout:Link link="sv1#area1#page8#mciu2#ln33"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
