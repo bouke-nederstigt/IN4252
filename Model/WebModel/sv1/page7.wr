@@ -1,13 +1,13 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="-35" gr:y="70" id="sv1#page7" name="Home" ignoreMasterPage="false">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="675" gr:y="55" id="sv1#page7" name="Home" ignoreMasterPage="false" linkOrder="sv1#page7#ln30">
   <ContentUnits>
     <MultiMessageUnit gr:x="0" gr:y="5" id="sv1#page7#mssu5" name="Welcome to Imager!">
-      <Message xml:space="preserve">Text</Message>
+      <Message xml:space="preserve">Do you want help with your Image Annotation or support the community?</Message>
     </MultiMessageUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="sv1#page7#mssu5"/>
+        <layout:Unit unitId="sv1#page7#mssu5" layout:style="WebRatio" layout:frameLayout="WebRatio/Basic"/>
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
@@ -36,4 +36,5 @@
       <layout:Cell/>
     </layout:Row>
   </layout:Grid>
+  <Link id="sv1#page7#ln30" name="Login or register here" to="sv1#area1" automaticCoupling="true" type="normal" validate="true"/>
 </Page>

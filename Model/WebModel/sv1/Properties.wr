@@ -1,7 +1,3 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1" name="Public" secure="false" homePage="sv1#page7" landmarks="sv1#page1">
-  <OperationUnits>
-    <ModuleInstanceUnit gr:x="450" gr:y="60" id="sv1#miu1" action="true" name="Login" moduleId="mov1#opm1">
-      <KOLink id="sv1#miu1#kln5" name="KOFlow5" to="sv1#page1#mssu4" automaticCoupling="true"/>
-    </ModuleInstanceUnit>
-  </OperationUnits>
+<SiteView xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1" name="Public" secure="false" homePage="sv1#page7" landmarks="sv1#area1" layout:style="WebRatio">
+  <OperationUnits/>
 </SiteView>

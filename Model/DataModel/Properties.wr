@@ -127,5 +127,6 @@
       <db:JoinColumn attribute="ent6#att6" name="annotation_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db1" name="crowd_image" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/crowd_image" username="root" cryptedPassword="true" password="cm9vdA==" schema="public"/>
+  <db:Database id="db1" name="crowd_image" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/crowd_image" username="root" cryptedPassword="true" password="cm9vdA==" schema="public">
+  </db:Database>
 </DataModel>
