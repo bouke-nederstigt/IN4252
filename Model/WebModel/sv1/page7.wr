@@ -1,9 +1,20 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="670" gr:y="315" id="sv1#page7" name="Home" ignoreMasterPage="false">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="670" gr:y="385" id="sv1#page7" name="Home" ignoreMasterPage="false">
   <ContentUnits>
-    <MultiMessageUnit gr:x="0" gr:y="0" id="sv1#page7#mssu5" name="Welcome to Imager!">
+    <MultiMessageUnit gr:x="170" gr:y="15" id="sv1#page7#mssu5" name="Welcome to Imager!">
       <Message xml:space="preserve">Do you want help with your Image Annotation or support the community? Please login or register above!</Message>
     </MultiMessageUnit>
-    <PowerIndexUnit gr:x="20" gr:y="100" id="sv1#page7#pwu1" name="Images" sortable="false" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="ent3#att22 ent3#att24" maxResults="2"/>
+    <PowerIndexUnit gr:x="5" gr:y="105" id="sv1#page7#pwu3" name="List3" sortable="false" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="ent3#att24" maxResults="2" gr:showAllParts="false" distinct="false" customDescriptor="false"/>
+    <IndexUnit gr:x="130" gr:y="115" id="sv1#page7#inu1" name="Simple List1" entity="ent3" displayAttributes="ent3#att24" maxResults="3"/>
+    <GetUnit gr:x="0" gr:y="5" id="sv1#page7#gtu3" name="Get Current User" contextParameters="UserCtxParam">
+      <Link id="sv1#page7#gtu3#ln9" name="Flow9" to="sv1#inn4" type="transport" validate="true">
+        <LinkParameter id="sv1#page7#gtu3#ln9#par10" name="UserCtxParam.oid_Input" source="sv1#page7#gtu3.UserCtxParam" target="sv1#inn4.isnotnull"/>
+      </Link>
+    </GetUnit>
+    <DataUnit gr:x="320" gr:y="0" id="sv1#page7#dau4" name="Welcome back!" entity="User" displayAttributes="userName email User#att18">
+      <Selector id="sv1#page7#dau4#su14" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#page7#dau4#su14#kcond13" name="KeyCondition13" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -23,10 +34,61 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="sv1#page7#pwu1">
-          <layout:Attribute attribute="ent3#att22"/>
+        <layout:Unit unitId="sv1#page7#pwu3">
           <layout:Attribute attribute="ent3#att24"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page7#inu1">
+          <layout:Attribute attribute="ent3#att24"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page7#dau4">
+          <layout:Attribute attribute="userName"/>
+          <layout:Attribute attribute="email"/>
+          <layout:Attribute attribute="User#att18"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

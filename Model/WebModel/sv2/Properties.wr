@@ -1,4 +1,4 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv2" name="Requester" protected="false" secure="false" landmarks="sv2#miu2 sv2#area2" customURLName="requester" homePage="sv2#page3">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv2" name="Requester" protected="true" secure="false" landmarks="sv2#miu2 sv2#area2" customURLName="requester" homePage="sv2#page3">
   <OperationUnits>
     <ModuleInstanceUnit gr:x="165" gr:y="475" id="sv2#miu2" action="true" name="Logout" moduleId="mov1#opm2" landmark="true"/>
     <ModuleInstanceUnit gr:x="1045" gr:y="305" id="sv2#miu4" action="true" name="Save campaign" moduleId="mov1#opm3">
