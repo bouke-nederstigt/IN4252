@@ -1,8 +1,9 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="675" gr:y="55" id="sv1#page7" name="Home" ignoreMasterPage="false" linkOrder="sv1#page7#ln30">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="670" gr:y="315" id="sv1#page7" name="Home" ignoreMasterPage="false">
   <ContentUnits>
-    <MultiMessageUnit gr:x="0" gr:y="5" id="sv1#page7#mssu5" name="Welcome to Imager!">
-      <Message xml:space="preserve">Do you want help with your Image Annotation or support the community?</Message>
+    <MultiMessageUnit gr:x="0" gr:y="0" id="sv1#page7#mssu5" name="Welcome to Imager!">
+      <Message xml:space="preserve">Do you want help with your Image Annotation or support the community? Please login or register above!</Message>
     </MultiMessageUnit>
+    <PowerIndexUnit gr:x="20" gr:y="100" id="sv1#page7#pwu1" name="Images" sortable="false" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="ent3#att22 ent3#att24" maxResults="2"/>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -22,7 +23,12 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12"/>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page7#pwu1">
+          <layout:Attribute attribute="ent3#att22"/>
+          <layout:Attribute attribute="ent3#att24"/>
+        </layout:Unit>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
@@ -36,5 +42,4 @@
       <layout:Cell/>
     </layout:Row>
   </layout:Grid>
-  <Link id="sv1#page7#ln30" name="Login or register here" to="sv1#area1" automaticCoupling="true" type="normal" validate="true"/>
 </Page>
