@@ -1,5 +1,5 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv3" name="Worker" protected="true" secure="false" homePage="sv3#page4" landmarks="sv3#miu3" customURLName="worker">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv3" name="Worker" protected="true" secure="false" landmarks="sv3#miu3 sv3#area7" customURLName="worker" homePage="sv3#area6#page1">
   <OperationUnits>
-    <ModuleInstanceUnit gr:x="255" gr:y="50" id="sv3#miu3" action="true" name="Logout" moduleId="mov1#opm2" landmark="true"/>
+    <ModuleInstanceUnit gr:x="30" gr:y="30" id="sv3#miu3" action="true" name="Logout" moduleId="mov1#opm2" landmark="true"/>
   </OperationUnits>
 </SiteView>

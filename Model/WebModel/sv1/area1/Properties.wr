@@ -1,7 +1,6 @@
 <Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="-15" gr:y="10" id="sv1#area1" name="Login and Register" landmark="true" defaultPage="sv1#area1#page5">
   <OperationUnits>
     <ModuleInstanceUnit id="sv1#area1#miu8" name="Login" gr:x="265" gr:y="20" action="true" moduleId="mov1#opm1">
-      <OKLink id="sv1#area1#miu8#oln23" name="OKFlow11" to="sv1#page7" automaticCoupling="true"/>
       <KOLink id="sv1#area1#miu8#kln16" name="KOFlow5" to="sv1#area1#page5#mssu4" automaticCoupling="true"/>
     </ModuleInstanceUnit>
     <IsNotNullUnit gr:x="190" gr:y="475" id="sv1#area1#inn3" name="Skills selected">
@@ -10,5 +9,15 @@
         <LinkParameter id="sv1#area1#inn3#oln32#par62" name="Input Value_KeyCondition11 [oid] [Skills] [Target]" source="inputValue" target="sv1#area1#opg5#cnu2#su12#kcond11.ent7#att7"/>
       </OKLink>
     </IsNotNullUnit>
+    <LoginUnit gr:x="570" gr:y="575" id="sv1#area1#lgu3" name="Login Worker"/>
+    <SelectorUnit gr:x="360" gr:y="700" id="sv1#area1#seu4" name="Login details" entity="User" distinctAttributes="userName password" linkOrder="sv1#area1#seu4#ln32">
+      <Selector id="sv1#area1#seu4#su24" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area1#seu4#su24#kcond22" name="UserId" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv1#area1#seu4#ln32" name="Flow32" to="sv1#area1#lgu3" type="transport" validate="true">
+        <LinkParameter id="sv1#area1#seu4#ln32#par30" name="userName_Username" source="userNameArray" target="sv1#area1#lgu3.username"/>
+        <LinkParameter id="sv1#area1#seu4#ln32#par32" name="password_Password" source="passwordArray" target="sv1#area1#lgu3.password"/>
+      </Link>
+    </SelectorUnit>
   </OperationUnits>
 </Area>

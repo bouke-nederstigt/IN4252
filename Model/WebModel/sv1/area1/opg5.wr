@@ -7,7 +7,7 @@
       <TargetSelector id="sv1#area1#opg5#cnu2#su12" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#area1#opg5#cnu2#su12#kcond11" name="KeyCondition11" predicate="in" implied="false"/>
       </TargetSelector>
-      <OKLink id="sv1#area1#opg5#cnu2#oln10" name="OKFlow10" to="sv1#page7" automaticCoupling="true"/>
+      <OKLink id="sv1#area1#opg5#cnu2#oln23" name="OKFlow23" to="sv1#area1#lgu3" automaticCoupling="true"/>
     </ConnectUnit>
   </OperationUnits>
 </OperationGroup>

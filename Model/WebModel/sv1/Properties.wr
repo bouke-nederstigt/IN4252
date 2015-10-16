@@ -1,10 +1,3 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1" name="Public" secure="false" homePage="sv1#page7" landmarks="sv1#area1 sv1#area3" layout:style="WebRatio">
-  <OperationUnits>
-    <IsNotNullUnit gr:x="785" gr:y="315" id="sv1#inn4" name="User logged in">
-      <KOLink id="sv1#inn4#kln4" name="KOFlow4" to="sv1#page7#mssu5" automaticCoupling="true"/>
-      <OKLink id="sv1#inn4#oln13" name="OKFlow13" to="sv1#page7#dau4">
-        <LinkParameter id="sv1#inn4#oln13#par11" name="Input Value_KeyCondition13 [oid]" source="inputValue" target="sv1#page7#dau4#su14#kcond13.userOID"/>
-      </OKLink>
-    </IsNotNullUnit>
-  </OperationUnits>
+<SiteView xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1" name="Public" secure="false" homePage="sv1#page7" landmarks="sv1#area1" layout:style="WebRatio">
+  <OperationUnits/>
 </SiteView>

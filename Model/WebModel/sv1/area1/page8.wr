@@ -9,6 +9,9 @@
       <Link id="sv1#area1#page8#gtu4#ln38" name="Flow38" to="sv1#area1#opg5#cnu2" type="transport" validate="true">
         <LinkParameter id="sv1#area1#page8#gtu4#ln38#par61" name="UserCtxParam.oid_KeyCondition10 [oid] [User] [Source]" source="sv1#area1#page8#gtu4.UserCtxParam" target="sv1#area1#opg5#cnu2#su11#kcond10.userOID"/>
       </Link>
+      <Link id="sv1#area1#page8#gtu4#ln30" name="Flow30" to="sv1#area1#seu4" type="transport" validate="true">
+        <LinkParameter id="sv1#area1#page8#gtu4#ln30#par19" name="UserCtxParam.oid_UserId [oid]" source="sv1#area1#page8#gtu4.UserCtxParam" target="sv1#area1#seu4#su24#kcond22.userOID"/>
+      </Link>
     </GetUnit>
     <MultiMessageUnit gr:x="5" gr:y="0" id="sv1#area1#page8#mssu6" name="Your skills">
       <Message xml:space="preserve">Almost done! Please select your image annotation skills below.</Message>

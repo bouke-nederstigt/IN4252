@@ -1,6 +1,6 @@
 <OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="250" gr:y="100" id="sv1#area1#opg4" name="Register and login" transaction="true">
   <OperationUnits>
-    <CreateUnit gr:x="10" gr:y="125" id="sv1#area1#opg4#cru7" name="Add user" entity="User" linkOrder="sv1#area1#opg4#cru7#ln53 sv1#area1#opg4#cru7#ln4">
+    <CreateUnit gr:x="10" gr:y="125" id="sv1#area1#opg4#cru7" name="Add user" entity="User">
       <Link id="sv1#area1#opg4#cru7#ln44" name="Flow44" to="sv1#area1#opg4#cnu4" type="transport" validate="true">
         <LinkParameter id="sv1#area1#opg4#cru7#ln44#par69" name="oid_KeyCondition15 [oid] [User] [Source]" source="userOIDArray" target="sv1#area1#opg4#cnu4#su16#kcond15.userOID"/>
       </Link>
@@ -10,19 +10,11 @@
       <OKLink id="sv1#area1#opg4#cru7#oln37" name="OKFlow37" to="sv1#area1#opg4#switch2">
         <LinkParameter id="sv1#area1#opg4#cru7#oln37#par82" name="Type_Switch" source="User#att1Array" target="sv1#area1#opg4#switch2.switch"/>
       </OKLink>
-      <Link id="sv1#area1#opg4#cru7#ln53" name="Flow53" to="sv1#area1#opg4#lgu4" type="transport" validate="true">
-        <LinkParameter id="sv1#area1#opg4#cru7#ln53#par83" name="userName_Username" source="userNameArray" target="sv1#area1#opg4#lgu4.username"/>
-        <LinkParameter id="sv1#area1#opg4#cru7#ln53#par84" name="password_Password" source="passwordArray" target="sv1#area1#opg4#lgu4.password"/>
-      </Link>
       <Link id="sv1#area1#opg4#cru7#ln4" name="Flow4" to="sv1#area1#opg4#lgu2" type="transport" validate="true">
         <LinkParameter id="sv1#area1#opg4#cru7#ln4#par7" name="userName_Username" source="userNameArray" target="sv1#area1#opg4#lgu2.username"/>
         <LinkParameter id="sv1#area1#opg4#cru7#ln4#par8" name="password_Password" source="passwordArray" target="sv1#area1#opg4#lgu2.password"/>
       </Link>
     </CreateUnit>
-    <LoginUnit gr:x="10" gr:y="260" id="sv1#area1#opg4#lgu4" name="Login Worker">
-      <OKLink id="sv1#area1#opg4#lgu4#oln30" name="OKFlow30" to="sv1#area1#page8" automaticCoupling="true"/>
-      <KOLink id="sv1#area1#opg4#lgu4#kln19" name="KOFlow19" to="sv1#area1#page5#mssu4" automaticCoupling="true"/>
-    </LoginUnit>
     <ConnectUnit gr:x="130" gr:y="245" id="sv1#area1#opg4#cnu4" name="Worker" relationship="User2DefaultGroup">
       <SourceSelector id="sv1#area1#opg4#cnu4#su16" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#area1#opg4#cnu4#su16#kcond15" name="KeyCondition15" predicate="in" implied="false"/>
@@ -30,7 +22,7 @@
       <TargetSelector id="sv1#area1#opg4#cnu4#su17" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#area1#opg4#cnu4#su17#kcond16" name="KeyCondition16" predicate="in" implied="false"/>
       </TargetSelector>
-      <OKLink id="sv1#area1#opg4#cnu4#oln38" name="OKFlow38" to="sv1#area1#opg4#lgu4" automaticCoupling="true"/>
+      <OKLink id="sv1#area1#opg4#cnu4#oln22" name="OKFlow22" to="sv1#area1#page8" automaticCoupling="true"/>
     </ConnectUnit>
     <ConnectUnit gr:x="125" gr:y="0" id="sv1#area1#opg4#cnu5" name="Requester" relationship="User2DefaultGroup">
       <SourceSelector id="sv1#area1#opg4#cnu5#su18" defaultPolicy="fill" booleanOperator="and">
@@ -51,8 +43,6 @@
         <LinkParameter id="sv1#area1#opg4#switch2#oln36#par81" name="2_KeyCondition18 [oid] [Group] [Target]" sourceValue="2" target="sv1#area1#opg4#cnu5#su19#kcond18.groupOID"/>
       </OKLink>
     </SwitchUnit>
-    <LoginUnit gr:x="0" gr:y="20" id="sv1#area1#opg4#lgu2" name="Login Requester">
-      <OKLink id="sv1#area1#opg4#lgu2#oln4" name="OKFlow4" to="sv1#page7" automaticCoupling="true"/>
-    </LoginUnit>
+    <LoginUnit gr:x="0" gr:y="20" id="sv1#area1#opg4#lgu2" name="Login Requester"/>
   </OperationUnits>
 </OperationGroup>

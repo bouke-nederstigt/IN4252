@@ -1,0 +1,76 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv3#area7#page2" name="Account Overview">
+  <ContentUnits>
+    <GetUnit id="sv3#area7#page2#gtu6" name="Get Current User" gr:x="0" gr:y="5" contextParameters="UserCtxParam">
+      <Link id="sv3#area7#page2#gtu6#ln26" name="Flow26" to="sv3#area7#page2#pwu6" type="transport" validate="true">
+        <LinkParameter id="sv3#area7#page2#gtu6#ln26#par14" name="UserCtxParam.oid_RoleCondition3 [oid]" target="sv3#area7#page2#pwu6#su23#rcond3.userOID" source="sv3#area7#page2#gtu6.UserCtxParam"/>
+      </Link>
+      <Link id="sv3#area7#page2#gtu6#ln34" name="Flow34" to="sv3#area7#page2#dau8" automaticCoupling="true" type="transport" validate="true"/>
+    </GetUnit>
+    <PowerIndexUnit gr:x="165" gr:y="140" id="sv3#area7#page2#pwu6" name="Your skills" sortable="false" checkable="false" useCountQuery="false" entity="ent7" displayAttributes="ent7#att20">
+      <Selector id="sv3#area7#page2#pwu6#su23" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv3#area7#page2#pwu6#su23#rcond3" name="RoleCondition3" predicate="in" implied="false" role="rel2#role3"/>
+      </Selector>
+    </PowerIndexUnit>
+    <DataUnit gr:x="195" gr:y="0" id="sv3#area7#page2#dau8" name="Your account" entity="User" displayAttributes="userName email User#att18 User#att19 User#att21">
+      <Selector id="sv3#area7#page2#dau8#su25" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#area7#page2#dau8#su25#kcond24" name="KeyCondition24" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area7#page2#pwu6">
+          <layout:Attribute attribute="ent7#att20"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area7#page2#dau8">
+          <layout:Attribute attribute="userName"/>
+          <layout:Attribute attribute="email"/>
+          <layout:Attribute attribute="User#att18"/>
+          <layout:Attribute attribute="User#att19"/>
+          <layout:Attribute attribute="User#att21"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
