@@ -1,0 +1,148 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="270" id="sv2#area2#page12" name="Manage tasks">
+  <ContentUnits>
+    <PowerIndexUnit gr:x="0" gr:y="205" id="sv2#area2#page12#pwu4" name="Tasks" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att13 ent2#att14 ent2#att15 ent2#att16 ent2#att17" linkOrder="sv2#area2#page12#pwu4#ln9">
+      <Selector id="sv2#area2#page12#pwu4#su4" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv2#area2#page12#pwu4#su4#rcond1" name="RoleCondition1" predicate="in" implied="false" role="rel6#role12"/>
+      </Selector>
+      <Link id="sv2#area2#page12#pwu4#ln9" name="Flow5" to="sv2#area2#dlu2" type="normal" automaticCoupling="true" validate="true"/>
+    </PowerIndexUnit>
+    <EntryUnit gr:x="230" gr:y="200" id="sv2#area2#page12#enu5" name="Add new task to annotation campaign" entity="ent2" linkOrder="sv2#area2#page12#enu5#ln24">
+      <Field id="sv2#area2#page12#enu5#fld18" name="Title" type="string" modifiable="true" attribute="ent2#att13">
+        <VRules>
+          <MandatoryValidationRule id="sv2#area2#page12#enu5#fld18#mnd8" name="Mandatory8"/>
+        </VRules>
+      </Field>
+      <Field id="sv2#area2#page12#enu5#fld19" name="Description" type="text" modifiable="true" attribute="ent2#att14">
+        <VRules>
+          <MandatoryValidationRule id="sv2#area2#page12#enu5#fld19#mnd4" name="Mandatory4"/>
+        </VRules>
+      </Field>
+      <Field id="sv2#area2#page12#enu5#fld20" name="Reward" type="integer" modifiable="true" attribute="ent2#att15">
+        <VRules>
+          <MandatoryValidationRule id="sv2#area2#page12#enu5#fld20#mnd7" name="Mandatory7"/>
+        </VRules>
+      </Field>
+      <Field id="sv2#area2#page12#enu5#fld21" type="time" modifiable="true" name="Maxium execution time" attribute="ent2#att16">
+        <VRules>
+          <MandatoryValidationRule id="sv2#area2#page12#enu5#fld21#mnd5" name="Mandatory5"/>
+        </VRules>
+      </Field>
+      <Field id="sv2#area2#page12#enu5#fld22" name="Valid until" type="timestamp" modifiable="true" attribute="ent2#att17">
+        <VRules>
+          <MandatoryValidationRule id="sv2#area2#page12#enu5#fld22#mnd9" name="Mandatory9"/>
+        </VRules>
+      </Field>
+      <Link id="sv2#area2#page12#enu5#ln24" name="Save or update task" to="sv2#miu5" type="normal" validate="true">
+        <LinkParameter id="sv2#area2#page12#enu5#ln24#par50" name="Task Object_Task object" source="entityBean" target="sv2#miu5.mov1#opm4#icu4#icp2"/>
+      </Link>
+    </EntryUnit>
+    <MultiMessageUnit gr:x="335" gr:y="85" id="sv2#area2#page12#mssu1" name="Message"/>
+    <DataUnit gr:x="160" gr:y="0" id="sv2#area2#page12#dau3" name="Current campaign" entity="ent5" displayAttributes="ent5#att27 ent5#att28 ent5#att29">
+      <Selector id="sv2#area2#page12#dau3#su14" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#area2#page12#dau3#su14#kcond13" name="KeyCondition13" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv2#area2#page12#dau3#ln15" name="Flow15" to="sv2#area2#page12#pwu4" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv2#area2#page12#dau3#ln25" name="Flow25" to="sv2#miu5" type="transport" validate="true">
+        <LinkParameter id="sv2#area2#page12#dau3#ln25#par51" name="oid_Campaign object" source="data.ent5#att5" target="sv2#miu5.mov1#opm4#icu4#icp7"/>
+      </Link>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area2#page12#dau3">
+          <layout:Attribute attribute="ent5#att27"/>
+          <layout:Attribute attribute="ent5#att28"/>
+          <layout:Attribute attribute="ent5#att29"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area2#page12#pwu4">
+          <layout:Link link="sv2#area2#page12#pwu4#ln9"/>
+          <layout:Attribute attribute="ent2#att13"/>
+          <layout:Attribute attribute="ent2#att14"/>
+          <layout:Attribute attribute="ent2#att15"/>
+          <layout:Attribute attribute="ent2#att16"/>
+          <layout:Attribute attribute="ent2#att17"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area2#page12#enu5">
+          <layout:Field field="sv2#area2#page12#enu5#fld18"/>
+          <layout:Field field="sv2#area2#page12#enu5#fld19"/>
+          <layout:Field field="sv2#area2#page12#enu5#fld20"/>
+          <layout:Field field="sv2#area2#page12#enu5#fld21"/>
+          <layout:Field field="sv2#area2#page12#enu5#fld22"/>
+          <layout:Link link="sv2#area2#page12#enu5#ln24"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area2#page12#mssu1"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

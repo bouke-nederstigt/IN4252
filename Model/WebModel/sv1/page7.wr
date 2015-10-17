@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="675" gr:y="400" id="sv1#page7" name="Home" ignoreMasterPage="false">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="765" gr:y="400" id="sv1#page7" name="Home" ignoreMasterPage="false">
   <ContentUnits>
     <MultiMessageUnit gr:x="5" gr:y="0" id="sv1#page7#mssu5" name="Welcome to Imager!">
       <Message xml:space="preserve">Do you want help with your Image Annotation or support the community? Please login or register above!</Message>

@@ -12,8 +12,11 @@
       </Link>
       <Link id="mov1#opm4#icu4#ln12" name="Flow12" to="mov1#opm4#opg3#mfu2" type="transport" validate="true">
         <LinkParameter id="mov1#opm4#icu4#ln12#par17" name="Task object_Task Object" source="mov1#opm4#icu4#icp2" target="mov1#opm4#opg3#mfu2.entityBeans"/>
+        <LinkParameter id="mov1#opm4#icu4#ln12#par18" name="Task key_Category [oid]" source="mov1#opm4#icu4#icp6" target="mov1#opm4#opg3#mfu2#su6#kcond4.ent2#att2"/>
       </Link>
-      <Link id="mov1#opm4#icu4#ln18" name="Flow18" to="mov1#opm4#opg3#rcnu1" automaticCoupling="true" type="transport" validate="true" gr:bendpoints="89,-173,-576,-178;400,-172,-360,-177;671,-171,6,-176"/>
+      <Link id="mov1#opm4#icu4#ln18" name="Flow18" to="mov1#opm4#opg3#pcu3" type="transport" validate="true" gr:bendpoints="89,-173,-576,-178;400,-172,-360,-177;671,-171,6,-176">
+        <LinkParameter id="mov1#opm4#icu4#ln18#par33" name="Campaign object_Campaign ID" source="mov1#opm4#icu4#icp7" target="mov1#opm4#opg3#pcu3#pcp4"/>
+      </Link>
     </InputCollectorUnit>
     <KOCollectorUnit id="mov1#opm4#kocu4" name="Error" gr:x="1110" gr:y="25">
       <OutputCollectorParameter id="mov1#opm4#kocu4#ocp3" name="Message" value="Something went wrong trying to save the campaign."/>

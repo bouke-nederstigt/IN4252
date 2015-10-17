@@ -1,13 +1,17 @@
 <OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1#opm4#opg3" name="Save Task" transaction="true" gr:x="250" gr:y="0">
   <OperationUnits>
     <CreateUnit id="mov1#opm4#opg3#cru3" name="Create Task" gr:x="135" gr:y="0" entity="ent2">
-      <OKLink id="mov1#opm4#opg3#cru3#oln19" name="OKFlow19" to="mov1#opm4#opg3#pcu3" automaticCoupling="true"/>
+      <OKLink id="mov1#opm4#opg3#cru3#oln19" name="OKFlow19" to="mov1#opm4#opg3#pcu3">
+        <LinkParameter id="mov1#opm4#opg3#cru3#oln19#par34" name="oid_Task ID" source="ent2#att2Array" target="mov1#opm4#opg3#pcu3#pcp3"/>
+      </OKLink>
     </CreateUnit>
     <ModifyUnit id="mov1#opm4#opg3#mfu2" name="Modify Task" gr:x="135" gr:y="205" entity="ent2" bulk="false">
       <Selector id="mov1#opm4#opg3#mfu2#su6" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov1#opm4#opg3#mfu2#su6#kcond4" name="Category" predicate="in" implied="false"/>
       </Selector>
-      <OKLink id="mov1#opm4#opg3#mfu2#oln20" name="OKFlow20" to="mov1#opm4#opg3#pcu3" automaticCoupling="true"/>
+      <OKLink id="mov1#opm4#opg3#mfu2#oln20" name="OKFlow20" to="mov1#opm4#opg3#pcu3">
+        <LinkParameter id="mov1#opm4#opg3#mfu2#oln20#par35" name="oid_Task ID" source="ent2#att2Array" target="mov1#opm4#opg3#pcu3#pcp3"/>
+      </OKLink>
     </ModifyUnit>
     <IsNotNullUnit id="mov1#opm4#opg3#inn2" name="Existing Task?" gr:x="0" gr:y="100">
       <OKLink id="mov1#opm4#opg3#inn2#oln12" name="OKLink47" to="mov1#opm4#opg3#mfu2">
@@ -15,7 +19,7 @@
       </OKLink>
       <KOLink id="mov1#opm4#opg3#inn2#kln7" name="KOLink19" to="mov1#opm4#opg3#cru3"/>
     </IsNotNullUnit>
-    <ReconnectUnit id="mov1#opm4#opg3#rcnu1" name="Task to Campaign" gr:x="415" gr:y="85" relationship="rel6#role12">
+    <ReconnectUnit id="mov1#opm4#opg3#rcnu1" name="Task to Campaign" gr:x="415" gr:y="85" relationship="rel6#role11">
       <SourceSelector id="mov1#opm4#opg3#rcnu1#su7" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov1#opm4#opg3#rcnu1#su7#kcond6" name="Product" predicate="in" implied="false"/>
       </SourceSelector>
@@ -25,7 +29,12 @@
       <OKLink id="mov1#opm4#opg3#rcnu1#oln25" name="OKFlow25" to="mov1#opm4#opg3#pcu2" automaticCoupling="true"/>
     </ReconnectUnit>
     <ParameterCollectorUnit gr:x="220" gr:y="105" id="mov1#opm4#opg3#pcu3" name="Collect task information">
-      <OKLink id="mov1#opm4#opg3#pcu3#oln21" name="OKFlow21" to="mov1#opm4#opg3#rcnu1" automaticCoupling="true"/>
+      <OKLink id="mov1#opm4#opg3#pcu3#oln21" name="OKFlow21" to="mov1#opm4#opg3#rcnu1">
+        <LinkParameter id="mov1#opm4#opg3#pcu3#oln21#par52" name="Campaign ID_Image [oid] [Annotation Campaigns] [ConnectTarget]" source="mov1#opm4#opg3#pcu3#pcp4" target="mov1#opm4#opg3#rcnu1#su8#kcond7.ent5#att5"/>
+        <LinkParameter id="mov1#opm4#opg3#pcu3#oln21#par53" name="Task ID_Product [oid] [Task] [ConnectSource]" source="mov1#opm4#opg3#pcu3#pcp3" target="mov1#opm4#opg3#rcnu1#su7#kcond6.ent2#att2"/>
+      </OKLink>
+      <CollectorParameter id="mov1#opm4#opg3#pcu3#pcp3" name="Task ID"/>
+      <CollectorParameter id="mov1#opm4#opg3#pcu3#pcp4" name="Campaign ID"/>
     </ParameterCollectorUnit>
     <ParameterCollectorUnit id="mov1#opm4#opg3#pcu2" name="Collect Message Information" gr:x="600" gr:y="100">
       <CollectorParameter id="mov1#opm4#opg3#pcu2#pcp2" name="Message" value="Category succesfully saved"/>

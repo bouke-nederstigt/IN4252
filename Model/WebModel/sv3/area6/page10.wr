@@ -1,0 +1,78 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="315" gr:y="0" id="sv3#area6#page10" name="Annotate image">
+  <ContentUnits>
+    <DataUnit gr:x="0" gr:y="0" id="sv3#area6#page10#dau9" name="What do you see in this image?" entity="ent3" displayAttributes="ent3#att22 ent3#att23 ent3#att24">
+      <Selector id="sv3#area6#page10#dau9#su29" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#area6#page10#dau9#su29#kcond26" name="KeyCondition26" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+    <EntryUnit gr:x="0" gr:y="105" id="sv3#area6#page10#enu7" name="Please select a label from the list and a confidence from 5 (very confident) to 1 (not sure)" entity="ent6" fieldOrder="sv3#area6#page10#enu7#sfld4 sv3#area6#page10#enu7#sfld3">
+      <SelectionField id="sv3#area6#page10#enu7#sfld3" name="Confidence" type="integer" role="rel9#role18" attribute="ent6#att26">
+        <VRules>
+          <MandatoryValidationRule id="sv3#area6#page10#enu7#sfld3#mnd1" name="Mandatory1"/>
+        </VRules>
+        <Slot id="sv3#area6#page10#enu7#sfld3#slot1" name="Value" label="true" output="true" value="5|4|3|2|1"/>
+      </SelectionField>
+      <SelectionField id="sv3#area6#page10#enu7#sfld4" name="Label" type="string" role="rel9#role18" attribute="ent6#att25">
+        <VRules>
+          <MandatoryValidationRule id="sv3#area6#page10#enu7#sfld4#mnd2" name="Mandatory2"/>
+        </VRules>
+        <Slot id="sv3#area6#page10#enu7#sfld4#slot3" name="Interpretation" label="true" output="true" value="Summer|Spring|Fall|Winter"/>
+      </SelectionField>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area6#page10#dau9">
+          <layout:Attribute attribute="ent3#att22"/>
+          <layout:Attribute attribute="ent3#att23"/>
+          <layout:Attribute attribute="ent3#att24"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area6#page10#enu7">
+          <layout:Field field="sv3#area6#page10#enu7#sfld4"/>
+          <layout:Field field="sv3#area6#page10#enu7#sfld3"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
