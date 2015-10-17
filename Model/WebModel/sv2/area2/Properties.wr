@@ -1,11 +1,18 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="665" gr:y="220" id="sv2#area2" name="Campaigns" landmark="true" protected="false" defaultPage="sv2#area2#page9">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="565" gr:y="205" id="sv2#area2" name="Campaigns" landmark="true" protected="false" defaultPage="sv2#area2#page9">
   <OperationUnits>
-    <DeleteUnit gr:x="15" gr:y="225" id="sv2#area2#dlu1" name="Delete" entity="ent5">
+    <DeleteUnit gr:x="15" gr:y="210" id="sv2#area2#dlu1" name="Delete" entity="ent5">
       <Selector id="sv2#area2#dlu1#su5" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#area2#dlu1#su5#kcond5" name="KeyCondition5" predicate="in" implied="false"/>
       </Selector>
       <KOLink id="sv2#area2#dlu1#kln10" name="KOFlow10" to="sv2#area2#page9#mssu2" automaticCoupling="true"/>
       <OKLink id="sv2#area2#dlu1#oln16" name="OKFlow16" to="sv2#area2#page9#mssu2" automaticCoupling="true" gr:bendpoints="95,-48,-60,57"/>
+    </DeleteUnit>
+    <DeleteUnit gr:x="305" gr:y="230" id="sv2#area2#dlu2" name="Delete" entity="ent2">
+      <Selector id="sv2#area2#dlu2#su13" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#area2#dlu2#su13#kcond12" name="KeyCondition12" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv2#area2#dlu2#oln11" name="OKFlow11" to="sv2#area2#page9#mssu7" automaticCoupling="true"/>
+      <KOLink id="sv2#area2#dlu2#kln5" name="KOFlow5" to="sv2#area2#page9#mssu7" automaticCoupling="true" gr:bendpoints="-13,127,-18,-113"/>
     </DeleteUnit>
   </OperationUnits>
 </Area>

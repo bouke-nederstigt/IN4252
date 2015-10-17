@@ -1,9 +1,8 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv2#area2#page9" name="Manage Campaigns">
   <ContentUnits>
-    <PowerIndexUnit gr:x="0" gr:y="0" id="sv2#area2#page9#pwu2" name="Campaigns" sortable="true" checkable="false" useCountQuery="false" entity="ent5" linkOrder="sv2#area2#page9#pwu2#ln15 sv2#area2#page9#pwu2#ln21 sv2#area2#page9#pwu2#ln2" displayAttributes="ent5#att27 ent5#att29 ent5#att28">
-      <Link id="sv2#area2#page9#pwu2#ln15" name="edit" to="sv2#area2#page9#enu3" automaticCoupling="true" type="normal" validate="true"/>
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv2#area2#page9#pwu2" name="Campaigns" sortable="true" checkable="false" useCountQuery="false" entity="ent5" linkOrder="sv2#area2#page9#pwu2#ln21 sv2#area2#page9#pwu2#ln2" displayAttributes="ent5#att27 ent5#att29 ent5#att28">
       <Link id="sv2#area2#page9#pwu2#ln21" name="delete" to="sv2#area2#dlu1" type="normal" validate="true" automaticCoupling="true"/>
-      <Link id="sv2#area2#page9#pwu2#ln2" name="Manage tasks" to="sv2#area2#page12" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv2#area2#page9#pwu2#ln2" name="Manage tasks" to="sv2#area2#page9#seu3" automaticCoupling="true" type="normal" validate="true"/>
     </PowerIndexUnit>
     <EntryUnit gr:x="155" gr:y="5" id="sv2#area2#page9#enu3" name="Campaign info" linkOrder="sv2#area2#page9#enu3#ln16 sv2#area2#page9#enu3#ln17" entity="ent5">
       <Link id="sv2#area2#page9#enu3#ln16" name="Save" to="sv2#miu4" type="normal" validate="true">
@@ -30,7 +29,33 @@
         </VRules>
       </Field>
     </EntryUnit>
-    <MultiMessageUnit gr:x="175" gr:y="100" id="sv2#area2#page9#mssu2" name="Message"/>
+    <MultiMessageUnit gr:x="225" gr:y="110" id="sv2#area2#page9#mssu2" name="Message"/>
+    <SelectorUnit gr:x="35" gr:y="325" id="sv2#area2#page9#seu3" name="Selected campaign" entity="ent5" distinctAttributes="ent5#att5" linkOrder="sv2#area2#page9#seu3#ln41">
+      <Selector id="sv2#area2#page9#seu3#su21" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#area2#page9#seu3#su21#kcond19" name="Campaign" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv2#area2#page9#seu3#ln28" name="Flow25" to="sv2#area2#page9#pwu1" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv2#area2#page9#seu3#ln41" name="edit" to="sv2#area2#page9#enu3" type="normal" automaticCoupling="true" validate="true"/>
+    </SelectorUnit>
+    <EntryUnit gr:x="440" gr:y="280" id="sv2#area2#page9#enu4" name="Task info" entity="ent2" linkOrder="sv2#area2#page9#enu4#ln37">
+      <Link id="sv2#area2#page9#enu4#ln37" name="Save" to="sv2#miu5" type="normal" validate="true">
+        <LinkParameter id="sv2#area2#page9#enu4#ln37#par9" name="Key [oid]_Task key" source="key.ent2#att2" target="sv2#miu5.mov1#opm4#icu4#icp6"/>
+        <LinkParameter id="sv2#area2#page9#enu4#ln37#par10" name="Task Object_Task object" source="entityBean" target="sv2#miu5.mov1#opm4#icu4#icp2"/>
+      </Link>
+      <Field id="sv2#area2#page9#enu4#fld23" name="Title" type="string" modifiable="true" attribute="ent2#att13"/>
+      <Field id="sv2#area2#page9#enu4#fld24" name="Description" type="text" modifiable="true" attribute="ent2#att14"/>
+      <Field id="sv2#area2#page9#enu4#fld25" name="Reward" type="string" modifiable="true"/>
+      <Field id="sv2#area2#page9#enu4#fld26" name="Execution time" type="time" modifiable="true" attribute="ent2#att16"/>
+      <Field id="sv2#area2#page9#enu4#fld27" name="Expiration time" type="timestamp" modifiable="true" attribute="ent2#att17"/>
+    </EntryUnit>
+    <PowerIndexUnit gr:x="234" gr:y="418" id="sv2#area2#page9#pwu1" name="Tasks" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att13 ent2#att14 ent2#att15 ent2#att16 ent2#att17" linkOrder="sv2#area2#page9#pwu1#ln39 sv2#area2#page9#pwu1#ln40">
+      <Link id="sv2#area2#page9#pwu1#ln39" name="edit" to="sv2#area2#page9#enu4" automaticCoupling="true" type="normal" validate="true"/>
+      <Selector id="sv2#area2#page9#pwu1#su22" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv2#area2#page9#pwu1#su22#rcond4" name="Campagin" predicate="in" implied="false" role="rel6#role12"/>
+      </Selector>
+      <Link id="sv2#area2#page9#pwu1#ln40" name="Flow5" to="sv2#area2#dlu2" automaticCoupling="true" type="normal" validate="true"/>
+    </PowerIndexUnit>
+    <MultiMessageUnit gr:x="454" gr:y="438" id="sv2#area2#page9#mssu7" name="Message"/>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -39,7 +64,6 @@
           <layout:Attribute attribute="ent5#att27"/>
           <layout:Attribute attribute="ent5#att29"/>
           <layout:Attribute attribute="ent5#att28"/>
-          <layout:Link link="sv2#area2#page9#pwu2#ln15"/>
           <layout:Link link="sv2#area2#page9#pwu2#ln21"/>
           <layout:Link link="sv2#area2#page9#pwu2#ln2"/>
         </layout:Unit>
